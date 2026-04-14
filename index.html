@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InterVisions — Intersectional AI for a Fairer Future</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.jpg" alt="InterVisions" class="nav-logo-img">
+      </a>
+      <button class="nav-menu-btn" id="menuBtn">
+        <span data-i18n="nav-menu">Menú</span>
+        <div class="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </button>
+    </div>
+  </nav>
+
+  <div class="menu-overlay" id="menuOverlay">
+    <div class="menu-overlay-inner">
+      <div class="menu-top">
+        <a href="index.html" class="nav-logo">
+          <img src="images/logo.jpg" alt="InterVisions" class="nav-logo-img">
+        </a>
+        <div class="menu-lang">
+          <a href="#" data-lang="en" class="active">EN</a>
+          <a href="#" data-lang="cat">CAT</a>
+          <a href="#" data-lang="es">CAST</a>
+        </div>
+        <button class="menu-close" id="menuClose">✕</button>
+      </div>
+      <div class="menu-body">
+        <div class="menu-col">
+          <a href="pages/tools.html" class="menu-section-title" data-i18n="menu-tools-title">Tools</a>
+          <ul class="menu-links">
+            <li><a href="pages/tools.html#guidelines"><span data-i18n="menu-tool-guidelines">Intersectional Impact Assessment Guidelines</span> <span class="arrow">[→]</span></a></li>
+            <li><a href="pages/tools.html#audit"><span data-i18n="menu-tool-audit">Audit Tool</span> <span class="arrow">[→]</span></a></li>
+            <li><a href="pages/tools.html#workshops"><span data-i18n="menu-tool-workshops">Participatory Workshops</span> <span class="arrow">[→]</span></a></li>
+            <li><a href="pages/tools.html#benchmark"><span data-i18n="menu-tool-benchmark">Benchmark</span> <span class="arrow">[→]</span></a></li>
+          </ul>
+          <a href="pages/team.html" class="menu-section-title" style="margin-top:2rem;" data-i18n="menu-team-title">Our Team</a>
+          <ul class="menu-links">
+            <li><a href="pages/team.html#consortium"><span data-i18n="menu-team-consortium">Consortium</span> <span class="arrow">[→]</span></a></li>
+            <li><a href="pages/team.html#advisory"><span data-i18n="menu-team-advisory">Advisory Board</span> <span class="arrow">[→]</span></a></li>
+            <li><a href="pages/team.html#working-groups"><span data-i18n="menu-team-working-groups">Working Groups</span> <span class="arrow">[→]</span></a></li>
+            <li><a href="pages/team.html#workshops-wg"><span data-i18n="menu-team-workshops-wg">Participatory Workshops Working Group</span> <span class="arrow">[→]</span></a></li>
+          </ul>
+        </div>
+        <div class="menu-col">
+          <div class="menu-contact">
+            <div class="menu-contact-label" data-i18n="menu-contact-label">Contact:</div>
+            <a href="mailto:intervisions@donestech.net">intervisions@donestech.net</a>
+            <a href="https://linkedin.com" target="_blank">Linkedin</a>
+          </div>
+          <div class="menu-funding" style="margin-top:2rem;">
+            <div class="menu-funding-label" data-i18n="menu-funding-label">Funding:</div>
+            <img src="images/EN_Co-fundedbytheEU_RGB_WHITE Outline.png" alt="Funded by the European Union" class="eu-logo-img">
+            <div class="menu-funding-label" style="margin-top:1.5rem;" data-i18n="menu-participants-label">Participants:</div>
+            <div class="menu-participants">
+              <img src="images/aliainvestigaccio_logo.png" alt="ALIA Investigació" class="participant-logo">
+              <img src="images/CVC-logo-white.png" alt="CVC Computer Vision Center" class="participant-logo">
+              <img src="images/DiBa.png" alt="Diputació Barcelona" class="participant-logo">
+            </div>
+          </div>
+          <div style="margin-top:2rem;">
+            <a href="pages/privacy.html" style="color:rgba(255,255,255,0.4);font-size:0.75rem;" data-i18n="menu-privacy">Privacy policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <p class="hero-description" data-i18n-html="hero-description"><strong>InterVisions</strong> is a multidisciplinary project that combines intersectional feminist theory with participatory AI practices to address the biases and inequalities reproduced by artificial intelligence models that connect language and vision.</p>
+        <div class="hero-callout">
+          <p data-i18n="hero-goal">Its goal is to promote AI systems that are fairer, more inclusive, and aligned with fundamental rights.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="video-section">
+    <div class="container">
+    <div class="video-wrapper">
+      <video class="video-player" playsinline preload="none" poster="images/Video_1_snap.png" controls>
+        <source src="videos/Video_1_360p.mp4" type="video/mp4">
+      </video>
+      <div class="video-overlay" id="videoOverlay">
+        <button class="video-play-btn" id="videoPlayBtn" aria-label="Play video">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- KEY ASPECTS -->
+  <section class="key-aspects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-label" data-i18n="key-aspects-label">Key Aspects</h2>
+        <p class="section-intro" data-i18n="key-aspects-intro">Explore the core concepts that guide the InterVisions project — from understanding how AI systems reproduce bias, to why an intersectional approach is essential, to the role of participation in shaping fairer technologies.</p>
+      </div>
+    </div>
+    <div class="accordion">
+      <div class="accordion-item acc-color-1">
+          <button class="accordion-trigger">
+            <h3 data-i18n-html="accordion-1-title">Understanding AI <strong>Biases</strong></h3>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p data-i18n="accordion-1-content">AI systems that process language and images are trained on large datasets reflecting existing social structures. These systems can reproduce — and in some cases amplify — biases related to gender, race, class, ability, and other axes of inequality. Understanding where these biases originate and how they manifest is the first step toward building fairer technologies.</p>
+          </div>
+        </div>
+        <div class="accordion-item acc-color-2">
+          <button class="accordion-trigger">
+            <h3 data-i18n-html="accordion-2-title">Why <strong>Intersectionality</strong> Is Key in AI</h3>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p data-i18n="accordion-2-content">Intersectionality recognizes that people's experiences are shaped by multiple overlapping identities and systems of power. In AI, this means that bias doesn't affect everyone equally — a system may disadvantage someone not just because of their gender, but because of the combination of gender, ethnicity, age, and other factors. Intersectional analysis makes these compounding effects visible.</p>
+          </div>
+        </div>
+        <div class="accordion-item acc-color-3">
+          <button class="accordion-trigger">
+            <h3 data-i18n-html="accordion-3-title"><strong>Participation</strong> as a Foundation</h3>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p data-i18n="accordion-3-content">Technical solutions alone cannot address the social dimensions of AI bias. InterVisions places participation at the center of its methodology — working with affected communities to ensure that the tools and frameworks developed reflect real experiences, not just technical criteria. Participatory approaches build trust, generate relevant knowledge, and distribute the capacity to audit and challenge AI systems.</p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- TOOLS -->
+
+  <section class="tools-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-label" data-i18n="tools-label">Tools</h2>
+        <p class="section-intro" data-i18n="tools-intro">Four tools created by the InterVisions Project, designed to integrate an intersectional perspective into different areas of action. Each tool offers specific methodologies for analysis, evaluation, and participation.</p>
+      </div>
+      <div class="tools-grid">
+        <div class="tools-image">
+          <img src="images/team_photo.jpg" alt="InterVisions team">
+        </div>
+        <div class="tools-list-col">
+          <ul class="tools-list">
+            <li>
+              <a href="pages/tools.html#guidelines">
+                <span data-i18n="tool-guidelines">Intersectional Impact Assessment Guidelines</span>
+                <span class="tools-arrow">[→]</span>
+              </a>
+            </li>
+            <li>
+              <a href="pages/tools.html#audit">
+                <span data-i18n="tool-audit">Audit Tool</span>
+                <span class="tools-arrow">[→]</span>
+              </a>
+            </li>
+            <li>
+              <a href="pages/tools.html#workshops">
+                <span data-i18n="tool-workshops">Participatory Workshops</span>
+                <span class="tools-arrow">[→]</span>
+              </a>
+            </li>
+            <li>
+              <a href="pages/tools.html#benchmark">
+                <span data-i18n="tool-benchmark">Benchmark</span>
+                <span class="tools-arrow">[→]</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY VOICES -->
+  <section class="community-section">
+    <div class="container">
+      <div class="community-inner">
+        <div>
+          <h2 class="section-label" style="margin-bottom:1rem;" data-i18n="community-label">Community Voices</h2>
+          <p class="section-intro" data-i18n="community-intro">Share your experience and reflections with us, and help shape the project. Your input directly informs the development of our tools and methodologies.</p>
+        </div>
+        <div>
+          <form class="community-form" action="https://formspree.io/f/xojyqnnq" method="POST">
+            <input class="form-input" type="text" name="name" data-i18n-placeholder="form-name" placeholder="Your name" required>
+            <input class="form-input" type="email" name="email" data-i18n-placeholder="form-email" placeholder="Your email" required>
+            <textarea class="form-textarea" name="message" data-i18n-placeholder="form-message" placeholder="Write your comment…" required></textarea>
+            <button type="submit" class="form-submit" data-i18n="form-submit">Send</button>
+          </form>
+          <div class="form-thankyou" id="formThankYou">
+            <p class="form-thankyou-title" data-i18n="form-thankyou-title">Thank you!</p>
+            <p class="form-thankyou-text" data-i18n="form-thankyou-text">We've received your message and will be in touch soon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section class="resources-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-label" data-i18n="resources-label">Resources</h2>
+        <p class="section-intro" data-i18n="resources-intro">A curated collection of academic papers, reports, and tools related to AI bias, intersectionality, and algorithmic justice.</p>
+      </div>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <div class="resource-title">Resource title goes here</div>
+          <div class="resource-author">Author / Institution</div>
+          <div class="resource-description">A brief description of the resource, covering its main contribution to the field of intersectional AI fairness and what readers can expect to find.</div>
+          <div class="resource-tags">
+            <span class="resource-tag">#bias</span>
+            <span class="resource-tag">#methodology</span>
+          </div>
+          <a href="#" class="resource-link">View →</a>
+        </div>
+        <div class="resource-card">
+          <div class="resource-title">Resource title goes here</div>
+          <div class="resource-author">Author / Institution</div>
+          <div class="resource-description">A brief description of the resource, covering its main contribution to the field of intersectional AI fairness and what readers can expect to find.</div>
+          <div class="resource-tags">
+            <span class="resource-tag">#audit</span>
+            <span class="resource-tag">#participation</span>
+          </div>
+          <a href="#" class="resource-link">View →</a>
+        </div>
+        <div class="resource-card">
+          <div class="resource-title">Resource title goes here</div>
+          <div class="resource-author">Author / Institution</div>
+          <div class="resource-description">A brief description of the resource, covering its main contribution to the field of intersectional AI fairness and what readers can expect to find.</div>
+          <div class="resource-tags">
+            <span class="resource-tag">#benchmark</span>
+            <span class="resource-tag">#research</span>
+          </div>
+          <a href="#" class="resource-link">View →</a>
+        </div>
+      </div>
+      <div class="resources-pagination">
+        <button class="page-btn">←</button>
+        <span class="page-info">3 of 20</span>
+        <button class="page-btn">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <img src="images/logo.jpg" alt="InterVisions" class="footer-logo-img">
+          </div>
+          <div class="footer-lang">
+            <a href="#" data-lang="en" class="active">EN</a>
+            <a href="#" data-lang="cat">CAT</a>
+            <a href="#" data-lang="es">CAST</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title" data-i18n="footer-tools-title">Tools</div>
+          <ul class="footer-links">
+            <li><a href="pages/tools.html#guidelines"><span data-i18n="footer-tool-guidelines">Intersectional Impact Assessment Guidelines</span> <span class="arr">[→]</span></a></li>
+            <li><a href="pages/tools.html#audit"><span data-i18n="footer-tool-audit">Audit Tool</span> <span class="arr">[→]</span></a></li>
+            <li><a href="pages/tools.html#workshops"><span data-i18n="footer-tool-workshops">Participatory Workshops</span> <span class="arr">[→]</span></a></li>
+            <li><a href="pages/tools.html#benchmark"><span data-i18n="footer-tool-benchmark">Benchmark</span> <span class="arr">[→]</span></a></li>
+          </ul>
+          <div class="footer-col-title" style="margin-top:1.5rem;" data-i18n="footer-team-title">Our Team</div>
+          <ul class="footer-links">
+            <li><a href="pages/team.html#consortium"><span data-i18n="footer-team-consortium">Consortium</span> <span class="arr">[→]</span></a></li>
+            <li><a href="pages/team.html#advisory"><span data-i18n="footer-team-advisory">Advisory Board</span> <span class="arr">[→]</span></a></li>
+            <li><a href="pages/team.html#working-groups"><span data-i18n="footer-team-working-groups">Working Groups</span> <span class="arr">[→]</span></a></li>
+            <li><a href="pages/team.html#workshops-wg"><span data-i18n="footer-team-workshops-wg">Participatory Workshops Working Group</span> <span class="arr">[→]</span></a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title" data-i18n="footer-contact-title">Contact</div>
+          <div class="footer-contact">
+            <a href="mailto:intervisions@donestech.net">intervisions@donestech.net</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title" data-i18n="footer-funding-title">Funding</div>
+          <img src="images/EN_Co-fundedbytheEU_RGB_WHITE Outline.png" alt="Funded by the European Union" class="eu-logo-img" style="margin-bottom:1.5rem;">
+          <div class="footer-col-title" data-i18n="footer-participants-title">Participants</div>
+          <div class="footer-participants">
+            <img src="images/aliainvestigaccio_logo.png" alt="ALIA Investigació" class="participant-logo">
+            <img src="images/CVC-logo-white.png" alt="CVC Computer Vision Center" class="participant-logo">
+            <img src="images/DiBa.png" alt="Diputació Barcelona" class="participant-logo">
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a href="pages/privacy.html" data-i18n="footer-privacy">Privacy policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/includes.js"></script>
+</body>
+</html>
