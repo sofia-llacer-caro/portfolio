@@ -1,33 +1,19 @@
-// ============================================
-// INTERVISIONS — Main JS
-// ============================================
+function initScrollReveal() {
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
+    return;
+  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
 
-// Menu overlay
-const menuBtn = document.getElementById('menuBtn');
-const menuOverlay = document.getElementById('menuOverlay');
-const menuClose = document.getElementById('menuClose');
-
-if (menuBtn && menuOverlay) {
-  menuBtn.addEventListener('click', () => {
-    menuOverlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  });
-}
-if (menuClose && menuOverlay) {
-  menuClose.addEventListener('click', () => {
-    menuOverlay.classList.remove('open');
-    document.body.style.overflow = '';
-  });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 }
 
-// Accordion
-document.querySelectorAll('.accordion-trigger').forEach(trigger => {
-  trigger.addEventListener('click', () => {
-    const item = trigger.closest('.accordion-item');
-    const isOpen = item.classList.contains('open');
-    // Close all
-    document.querySelectorAll('.accordion-item.open').forEach(el => el.classList.remove('open'));
-    // Toggle clicked
-    if (!isOpen) item.classList.add('open');
-  });
+document.addEventListener('app:ready', () => {
+  initScrollReveal();
 });

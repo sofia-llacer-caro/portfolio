@@ -1,0 +1,55 @@
+{
+  "site": {
+    "name": "Sofia Llàcer Caro",
+    "tagline": "Portafoli."
+  },
+  "nav": {
+    "home": "Inici",
+    "projects": "Projectes",
+    "thoughts": "Recerca",
+    "archive": "Arxiu",
+    "skip_to_content": "Vés al contingut"
+  },
+  "home": {
+    "hero_subtitle": "Portafoli.",
+    "band_1": "Disseny",
+    "band_2": "Recerca",
+    "band_3": "Educació",
+    "band_4": "Escriptura",
+    "band_5": "Tecnologia",
+    "intro": "Treballo a la intersecció del disseny, la recerca i la tecnologia — creant coses que són útils, considerades i humanes.",
+    "featured_projects": "Projectes seleccionats",
+    "featured_thoughts": "Escrits recents",
+    "featured_archive": "Activitats passades",
+    "cta_projects": "Veure el meu treball",
+    "cta_thoughts": "Llegir els meus escrits",
+    "view_all": "Veure tot"
+  },
+  "projects": {
+    "title": "Projectes",
+    "subtitle": "Treball seleccionat"
+  },
+  "thoughts": {
+    "title": "Recerca & Publicacions",
+    "subtitle": "Articles, papers i escrits"
+  },
+  "archive": {
+    "title": "Arxiu",
+    "subtitle": "Tallers, xerrades i activitats passades"
+  },
+  "footer": {
+    "contact": "Contacta",
+    "rights": "Tots els drets reservats."
+  },
+  "lang": {
+    "ca": "Català",
+    "es": "Español",
+    "en": "English",
+    "fr": "Français"
+  },
+  "a11y": {
+    "lang_switch": "Canviar idioma",
+    "menu_open": "Obrir menú",
+    "menu_close": "Tancar menú"
+  }
+}

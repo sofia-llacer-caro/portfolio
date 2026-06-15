@@ -1,46 +1,28 @@
-<nav class="site-nav">
-  <div class="nav-inner">
-    <button class="nav-menu-btn" id="menuBtn">
-      <span data-i18n="nav-menu">Menú</span>
-      <div class="hamburger">
-        <span></span><span></span><span></span>
-      </div>
-    </button>
-  </div>
-</nav>
+<a href="#main" class="skip-link" data-i18n="nav.skip_to_content">Skip to content</a>
+<header class="site-nav">
+  <div class="container">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo">Sofia Llàcer Caro</a>
 
-<div class="menu-overlay" id="menuOverlay">
-  <div class="menu-overlay-inner">
-    <div class="menu-top">
-      <div class="menu-lang">
-        <a href="#" data-lang="en" class="active">EN</a>
-        <a href="#" data-lang="cat">CAT</a>
-        <a href="#" data-lang="es">CAST</a>
-      </div>
-      <button class="menu-close" id="menuClose">✕</button>
-    </div>
-    <div class="menu-body">
-      <div class="menu-col">
-        <a href="/pages/tools.html" class="menu-section-title" data-i18n="menu-tools-title">Tools</a>
-        <ul class="menu-links">
-          <li><a href="/pages/tools.html#guidelines"><span data-i18n="menu-tool-guidelines">Intersectional Impact Assessment Guidelines</span> <span class="arrow">[→]</span></a></li>
-          <li><a href="/pages/tools.html#audit"><span data-i18n="menu-tool-audit">Audit Tool</span> <span class="arrow">[→]</span></a></li>
-          <li><a href="/pages/tools.html#workshops"><span data-i18n="menu-tool-workshops">Participatory Workshops</span> <span class="arrow">[→]</span></a></li>
-          <li><a href="/pages/tools.html#benchmark"><span data-i18n="menu-tool-benchmark">Benchmark</span> <span class="arrow">[→]</span></a></li>
-        </ul>
-      </div>
-      <div class="menu-col">
-        <div class="menu-contact">
-          <div class="menu-contact-label" data-i18n="menu-contact-label">Contact:</div>
-          <a href="mailto:sofiallacercaro@proton.me">sofiallacercaro@proton.me</a>
-          <a href="https://www.linkedin.com/in/sofia-ll%C3%A0cer-caro/" target="_blank">Linkedin</a>
-          <a href="https://github.com/sofia-llacer-caro" target="_blank">GitHub</a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html"    class="nav-link" data-page="home"     data-i18n="nav.home">Home</a></li>
+        <li><a href="projects.html" class="nav-link" data-page="projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="thoughts.html" class="nav-link" data-page="thoughts" data-i18n="nav.thoughts">Thoughts</a></li>
+        <li><a href="archive.html"  class="nav-link" data-page="archive"  data-i18n="nav.archive">Archive</a></li>
+      </ul>
 
+      <div class="nav-right">
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button class="lang-btn" data-lang="ca" aria-pressed="false">CA</button>
+          <button class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+          <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
         </div>
-        <div style="margin-top:2rem;">
-          <a href="/pages/privacy.html" style="color:rgba(255,255,255,0.4);font-size:0.75rem;" data-i18n="menu-privacy">Privacy policy</a>
-        </div>
+
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </div>
+    </nav>
   </div>
-</div>
+</header>

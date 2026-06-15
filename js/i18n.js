@@ -1,89 +1,72 @@
-// ============================================
-// INTERVISIONS — i18n Engine
-// Loads texts/{lang}.json and applies to DOM
-// ============================================
+const i18n = (() => {
+  const SUPPORTED = ['ca', 'es', 'en', 'fr'];
+  let translations = {};
+  let currentLang = 'en';
 
-(function () {
-  const DEFAULT_LANG = 'en';
-  const SUPPORTED = ['en', 'cat', 'es'];
-  let currentTexts = {};
-  let currentLang = DEFAULT_LANG;
-
-  function getBase() {
-    return window.location.pathname.includes('/pages/') ? '../' : './';
+  function detectLang() {
+    const saved = localStorage.getItem('lang');
+    if (saved && SUPPORTED.includes(saved)) return saved;
+    const browser = (navigator.language || 'en').slice(0, 2).toLowerCase();
+    return SUPPORTED.includes(browser) ? browser : 'en';
   }
 
-  async function loadTexts(lang) {
-    try {
-      const res = await fetch(getBase() + 'texts/' + lang + '.json');
-      if (!res.ok) throw new Error('Not found');
-      return await res.json();
-    } catch {
-      if (lang !== DEFAULT_LANG) return loadTexts(DEFAULT_LANG);
-      return {};
-    }
+  function get(key) {
+    return key.split('.').reduce((obj, k) => obj?.[k], translations) ?? '';
   }
 
-  function applyTexts(texts) {
-    // Plain text
+  function apply() {
+    document.documentElement.lang = currentLang;
+
     document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      if (texts[key] !== undefined) el.textContent = texts[key];
+      const val = get(el.dataset.i18n);
+      if (val) el.textContent = val;
     });
-    // HTML content (elements with inline tags like <strong>)
-    document.querySelectorAll('[data-i18n-html]').forEach(el => {
-      const key = el.getAttribute('data-i18n-html');
-      if (texts[key] !== undefined) el.innerHTML = texts[key];
+
+    document.querySelectorAll('[data-i18n-attr]').forEach(el => {
+      const [attr, key] = el.dataset.i18nAttr.split(':');
+      const val = get(key);
+      if (val && attr) el.setAttribute(attr, val);
     });
-    // Form placeholders
-    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-      const key = el.getAttribute('data-i18n-placeholder');
-      if (texts[key] !== undefined) el.placeholder = texts[key];
+
+    document.querySelectorAll('[data-lang]').forEach(btn => {
+      const active = btn.dataset.lang === currentLang;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-pressed', active);
     });
+
+    const langDisplay = document.getElementById('hero-lang-display');
+    if (langDisplay) langDisplay.textContent = currentLang.toUpperCase();
   }
 
-  function updateLangLinks(lang) {
-    document.querySelectorAll('[data-lang]').forEach(a => {
-      a.classList.toggle('active', a.getAttribute('data-lang') === lang);
-    });
-    document.documentElement.lang = lang;
-  }
-
-  // Only wire elements that haven't been wired yet (safe to call multiple times)
-  function wireLangLinks() {
-    document.querySelectorAll('[data-lang]:not([data-i18n-wired])').forEach(a => {
-      a.setAttribute('data-i18n-wired', '1');
-      a.addEventListener('click', e => {
-        e.preventDefault();
-        setLanguage(a.getAttribute('data-lang'));
-      });
-    });
+  async function load(lang) {
+    const base = document.querySelector('base')?.href || window.location.href;
+    const url = new URL(`texts/${lang}.json`, base).href;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`${res.status}`);
+    translations = await res.json();
+    currentLang = lang;
   }
 
   async function setLanguage(lang) {
-    if (!SUPPORTED.includes(lang)) lang = DEFAULT_LANG;
-    currentLang = lang;
-    localStorage.setItem('lang', lang);
-    currentTexts = await loadTexts(lang);
-    applyTexts(currentTexts);
-    updateLangLinks(lang);
-    wireLangLinks();
+    if (!SUPPORTED.includes(lang)) return;
+    try {
+      await load(lang);
+      localStorage.setItem('lang', lang);
+      apply();
+    } catch (e) {
+      console.warn('[i18n] failed to load', lang, e);
+    }
   }
 
-  // Called by includes.js after injecting dynamic nav/footer so those
-  // elements get translated without re-fetching the JSON.
-  window.applyI18n = function () {
-    applyTexts(currentTexts);
-    updateLangLinks(currentLang);
-    wireLangLinks();
-  };
-
-  async function initI18n() {
-    const lang = localStorage.getItem('lang') || DEFAULT_LANG;
-    await setLanguage(lang);
+  async function init() {
+    const lang = detectLang();
+    try {
+      await load(lang);
+    } catch {
+      if (lang !== 'en') await load('en');
+    }
+    apply();
   }
 
-  // Auto-init on DOM ready
-  document.addEventListener('DOMContentLoaded', initI18n);
-
+  return { init, setLanguage, get, lang: () => currentLang };
 })();

@@ -1,0 +1,55 @@
+{
+  "site": {
+    "name": "Sofia Llàcer Caro",
+    "tagline": "Portfolio."
+  },
+  "nav": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "thoughts": "Recherche",
+    "archive": "Archives",
+    "skip_to_content": "Aller au contenu"
+  },
+  "home": {
+    "hero_subtitle": "Portfolio.",
+    "band_1": "Design",
+    "band_2": "Recherche",
+    "band_3": "Éducation",
+    "band_4": "Écriture",
+    "band_5": "Technologie",
+    "intro": "Je travaille à l'intersection du design, de la recherche et de la technologie — en créant des choses utiles, réfléchies et humaines.",
+    "featured_projects": "Projets sélectionnés",
+    "featured_thoughts": "Écrits récents",
+    "featured_archive": "Activités passées",
+    "cta_projects": "Voir mon travail",
+    "cta_thoughts": "Lire mes écrits",
+    "view_all": "Voir tout"
+  },
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Travail sélectionné"
+  },
+  "thoughts": {
+    "title": "Recherche & Publications",
+    "subtitle": "Articles, papers & écrits"
+  },
+  "archive": {
+    "title": "Archives",
+    "subtitle": "Ateliers, conférences & activités passées"
+  },
+  "footer": {
+    "contact": "Me contacter",
+    "rights": "Tous droits réservés."
+  },
+  "lang": {
+    "ca": "Català",
+    "es": "Español",
+    "en": "English",
+    "fr": "Français"
+  },
+  "a11y": {
+    "lang_switch": "Changer de langue",
+    "menu_open": "Ouvrir le menu",
+    "menu_close": "Fermer le menu"
+  }
+}
