@@ -1,6 +1,6 @@
 # Sofia Llàcer Caro — Personal Portfolio
 
-Personal website and portfolio for Sofia Llàcer Caro. Built as a static site with no build step, featuring a Swiss card-inspired design and four-language support (EN, CA, ES, FR).
+Personal website and portfolio for Sofia Llàcer Caro. Built as a static site with no build step, featuring a Swiss design-inspired design and four-language support (EN, CA, ES, FR).
 
 ## License
 
