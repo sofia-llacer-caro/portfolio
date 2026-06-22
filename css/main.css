@@ -1,11 +1,6 @@
-/* ============================================================
-   DESIGN SYSTEM — Sofia Llàcer Caro
-   Swiss card visual identity, inspired by Zürich Tourism Card
-   ============================================================ */
 
 /* --- Custom Properties --- */
 :root {
-  /* Zürich card colour palette */
   --c-red:     #E63329;
   --c-orange:  #F47920;
   --c-yellow:  #F9C51A;
@@ -222,7 +217,6 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   .nav-toggle { display: flex; }
 }
 
-/* --- Hero Card (Zürich-card reference) --- */
 .hero-card {
   background: var(--c-surface);
   border: 1px solid var(--c-border);
@@ -249,7 +243,6 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   color: var(--c-text-3);
 }
 
-/* Stacked rounded-pill bands — Zürich card motif */
 .hero-card__bands {
   display: flex; flex-direction: column;
   padding: var(--sp-2) var(--sp-3) var(--sp-6);
@@ -402,7 +395,6 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   transform: translateY(-3px);
 }
 
-/* Coloured accent strip at top — the Zürich band motif */
 .card__band {
   height: var(--card-band);
   background: var(--band-color, var(--c-text));
