@@ -14,6 +14,20 @@ function initScrollReveal() {
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 }
 
+function wireFlipCards() {
+  if (!window.matchMedia('(hover: none)').matches) return;
+  document.querySelectorAll('.pub-card').forEach(card => {
+    card.addEventListener('click', e => {
+      if (e.target.closest('a')) return;
+      document.querySelectorAll('.pub-card.flipped').forEach(c => {
+        if (c !== card) c.classList.remove('flipped');
+      });
+      card.classList.toggle('flipped');
+    });
+  });
+}
+
 document.addEventListener('app:ready', () => {
   initScrollReveal();
+  wireFlipCards();
 });

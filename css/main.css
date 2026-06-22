@@ -596,11 +596,24 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   margin-top: var(--sp-1);
 }
 
-.footer-contact {
-  font-size: var(--text-small); font-weight: 600;
-  color: var(--c-text-2); transition: color var(--ease-fast);
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
 }
-.footer-contact:hover { color: var(--c-text); }
+
+.footer-social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-text-3);
+  transition: color var(--ease-fast);
+}
+.footer-social__link:hover { color: var(--c-text); }
+.footer-social__link svg {
+  width: 20px;
+  height: 20px;
+}
 
 /* --- Section colour tokens --- */
 .section-projects { --section-color: #0177BC; }
@@ -609,7 +622,6 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
 
 /* ============================================================
    HOME — Section cards (scard)
-   The landing page IS these cards
    ============================================================ */
 
 .home-header {
@@ -631,7 +643,6 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   margin-top: var(--sp-5);
 }
 
-/* Stack of section cards */
 .home-cards {
   display: flex;
   flex-direction: column;
@@ -639,7 +650,6 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   padding-bottom: var(--sp-10);
 }
 
-/* Section card */
 .scard {
   border-radius: 28px;
   padding: var(--sp-6) var(--sp-7);
@@ -649,7 +659,6 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
 .scard--thoughts  { background: #DE0615; }
 .scard--archive   { background: #F6C500; color: #1A1A18; }
 
-/* Header row */
 .scard__header {
   display: flex;
   align-items: center;
@@ -673,7 +682,6 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   line-height: var(--lh-tight);
 }
 
-/* "See all" pill — top-right corner of each card */
 .scard__see-all {
   flex-shrink: 0;
   font-size: var(--text-micro);
@@ -696,7 +704,6 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   background: rgba(255,255,255,0.12);
 }
 
-/* Reveal — grid-template-rows animates height without knowing the content height */
 .scard__reveal {
   display: grid;
   grid-template-rows: 0fr;
@@ -709,14 +716,15 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   grid-template-rows: 1fr;
 }
 
-/* Inner preview area */
 .scard__preview { padding-top: var(--sp-5); }
 
-/* Projects: 3-column mini grid */
 .scard__preview-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--sp-3);
+}
+.scard__preview-grid--2 {
+  grid-template-columns: repeat(2, 1fr);
 }
 .scard__mini {
   background: rgba(255,255,255,0.12);
@@ -750,7 +758,6 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   padding-top: var(--sp-3);
 }
 
-/* Thoughts / Archive: row list */
 .scard__preview-list {
   display: flex;
   flex-direction: column;
@@ -790,7 +797,6 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   white-space: nowrap;
 }
 
-/* "See all" link — bottom of revealed content */
 .scard__preview-footer {
   display: flex;
   justify-content: flex-end;
@@ -811,7 +817,6 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
 .scard__full-link::after { content: ' →'; }
 .scard__full-link:hover { opacity: 0.6; }
 
-/* Yellow archive card — dark text overrides */
 .scard--archive .scard__see-all {
   color: rgba(0,0,0,0.55);
   border-color: rgba(0,0,0,0.2);
@@ -836,11 +841,14 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
 .scard--archive .scard__full-link { color: rgba(0,0,0,0.7); }
 
 /* ============================================================
-   FLIP CARDS — Research, Publications & Projects
-   Front: bold full-colour · Back: white with colour band
+   FLIP CARDS — Projects
    ============================================================ */
 
 .pub-grid {
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+}
+.pub-grid--3 {
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -865,13 +873,12 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
 .pub-card__back {
   position: absolute;
   inset: 0;
-  border-radius: 20px;           /* generous rounding on both faces */
+  border-radius: 20px;
   overflow: hidden;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
-/* ── Front: full colour, large white type ── */
 .pub-card__front {
   background: var(--pub-color, var(--c-text));
   display: flex;
@@ -909,20 +916,6 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   overflow: hidden;
 }
 
-.pub-card__authors {
-  font-size: var(--text-small);
-  font-weight: 500;
-  color: rgba(255,255,255,0.72);
-  line-height: var(--lh-snug);
-  margin-top: auto;
-  padding-top: var(--sp-3);
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-/* ── Back: white card with thin colour band at top ── */
 .pub-card__back {
   background: var(--c-surface);
   border: 1px solid var(--c-border);
@@ -1000,12 +993,132 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
 }
 .pub-card__link:hover { opacity: 0.6; }
 
+@media (max-width: 600px) {
+  .pub-card { height: 260px; }
+}
+
+@media (hover: none) {
+  .pub-card:hover .pub-card__inner { transform: none; }
+  .pub-card.flipped .pub-card__inner { transform: rotateY(180deg); }
+}
+
+/* ============================================================
+   EXPANDABLE CARDS — Research & Publications
+   ============================================================ */
+
+.pub-expand {
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--pub-color, var(--c-text));
+  transition: box-shadow var(--ease-base);
+}
+.pub-expand:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.pub-expand__header {
+  padding: var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.pub-expand__type {
+  font-size: var(--text-micro);
+  font-weight: 700;
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+}
+
+.pub-expand__title {
+  font-size: clamp(1.25rem, 2.2vw, 1.625rem);
+  font-weight: 800;
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+  color: #fff;
+}
+
+.pub-expand__authors {
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: rgba(255,255,255,0.72);
+  line-height: var(--lh-snug);
+}
+
+.pub-expand__reveal {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 420ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.pub-expand__reveal-inner {
+  overflow: hidden;
+}
+
+.pub-expand:hover .pub-expand__reveal {
+  grid-template-rows: 1fr;
+}
+
+.pub-expand__body {
+  padding: var(--sp-4) var(--sp-5) var(--sp-5);
+  background: var(--c-bg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.pub-expand__abstract {
+  font-size: var(--text-small);
+  line-height: var(--lh-relaxed);
+  color: var(--c-text-2);
+}
+
+.pub-expand__source {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--c-border);
+}
+
+.pub-expand__journal {
+  font-size: var(--text-micro);
+  font-weight: 600;
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--c-text-2);
+}
+
+.pub-expand__year {
+  font-size: var(--text-micro);
+  font-weight: 700;
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--c-text-3);
+}
+
+.pub-expand__link {
+  font-size: var(--text-micro);
+  font-weight: 700;
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--c-text-2);
+  text-decoration: none;
+  align-self: flex-start;
+  transition: opacity var(--ease-fast);
+}
+.pub-expand__link:hover { opacity: 0.6; }
+
 @media (max-width: 1024px) {
-  .pub-grid { grid-template-columns: repeat(2, 1fr); }
+  .pub-grid, .pub-grid--3 { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 600px) {
   .pub-grid { grid-template-columns: 1fr; }
-  .pub-card { height: 260px; }
+}
+
+@media (hover: none) {
+  .pub-expand__reveal { grid-template-rows: 1fr; }
 }
 
 /* Touch / no-hover: always show reveal */
@@ -1013,15 +1126,13 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   .scard__reveal { grid-template-rows: 1fr; }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .scard { padding: var(--sp-5); border-radius: 22px; }
-  .scard__preview-grid { grid-template-columns: repeat(2, 1fr); }
+  .scard__preview-grid { grid-template-columns: 1fr; }
   .scard__row { grid-template-columns: 4rem 1fr; }
   .scard__row-date { display: none; }
 }
 @media (max-width: 480px) {
-  .scard__preview-grid { grid-template-columns: 1fr; }
   .scard__see-all { display: none; }
 }
 
