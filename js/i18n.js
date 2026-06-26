@@ -41,7 +41,7 @@ const i18n = (() => {
   async function load(lang) {
     const base = document.querySelector('base')?.href || window.location.href;
     const url = new URL(`texts/${lang}.json`, base).href;
-    const res = await fetch(url);
+    const res = await fetch(url, { cache: 'no-cache' });
     if (!res.ok) throw new Error(`${res.status}`);
     translations = await res.json();
     currentLang = lang;
