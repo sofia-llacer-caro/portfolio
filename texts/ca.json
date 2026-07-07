@@ -8,6 +8,7 @@
     "projects": "Projectes",
     "thoughts": "Recerca",
     "talks": "Xerrades",
+    "gallery": "Galeria",
     "skip_to_content": "Vés al contingut"
   },
   "home": {
@@ -104,6 +105,10 @@
     "a7_cat": "Pòster",
     "a8_title": "Seminari: IA neurosimbòlica i justícia epistèmica per a víctimes del règim franquista — HerStory, Universitat de Barcelona",
     "a8_cat": "Seminari"
+  },
+  "gallery": {
+    "title": "Galeria",
+    "subtitle": "Fotos"
   },
   "footer": {
     "rights": "Tots els drets reservats."

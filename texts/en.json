@@ -8,6 +8,7 @@
     "projects": "Projects",
     "thoughts": "Research",
     "talks": "Talks",
+    "gallery": "Gallery",
     "skip_to_content": "Skip to content"
   },
   "home": {
@@ -104,6 +105,10 @@
     "a7_cat": "Poster",
     "a8_title": "Seminar: Neurosymbolic AI & Epistemic Justice for Francoist Regime Victims — HerStory, Universitat de Barcelona",
     "a8_cat": "Seminar"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Photos"
   },
   "footer": {
     "rights": "All rights reserved."

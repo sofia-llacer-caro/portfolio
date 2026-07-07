@@ -540,6 +540,36 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   .archive-item__category { grid-column: 2; }
 }
 
+/* --- Gallery Grid (Pinterest-style masonry) --- */
+.gallery-grid {
+  column-count: 4;
+  column-gap: var(--sp-5);
+}
+
+.gallery-grid__item {
+  display: block;
+  break-inside: avoid;
+  margin-bottom: var(--sp-5);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow var(--ease-base), transform var(--ease-base);
+}
+.gallery-grid__item:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-3px);
+}
+
+.gallery-grid__item img {
+  width: 100%; height: auto; display: block;
+}
+
+@media (max-width: 1024px) { .gallery-grid { column-count: 3; } }
+@media (max-width: 768px)  { .gallery-grid { column-count: 2; } }
+@media (max-width: 480px)  { .gallery-grid { column-count: 1; } }
+
 /* --- Buttons --- */
 .btn {
   display: inline-flex; align-items: center; gap: var(--sp-2);
@@ -611,6 +641,7 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
 .section-projects { --section-color: #0177BC; }
 .section-thoughts  { --section-color: #DE0615; }
 .section-archive   { --section-color: #F6C500; }
+.section-gallery   { --section-color: #00A99D; }
 
 /* ============================================================
    HOME — Section cards (scard)

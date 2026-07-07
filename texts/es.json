@@ -8,6 +8,7 @@
     "projects": "Proyectos",
     "thoughts": "Investigación",
     "talks": "Charlas",
+    "gallery": "Galería",
     "skip_to_content": "Ir al contenido"
   },
   "home": {
@@ -104,6 +105,10 @@
     "a7_cat": "Póster",
     "a8_title": "Seminario: IA neurosimbólica y justicia epistémica para víctimas del régimen franquista — HerStory, Universitat de Barcelona",
     "a8_cat": "Seminario"
+  },
+  "gallery": {
+    "title": "Galería",
+    "subtitle": "Fotos"
   },
   "footer": {
     "rights": "Todos los derechos reservados."

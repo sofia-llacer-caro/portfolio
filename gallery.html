@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Sofia Llàcer Caro</title>
+  <meta name="description" content="Photo gallery by Sofia Llàcer Caro.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="css/favicon.png">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <div data-include="pages/nav.html"></div>
+
+  <main id="main">
+    <div class="container">
+
+      <header class="page-header section-gallery">
+        <div class="page-header__band"></div>
+        <h1 class="page-header__title" data-i18n="gallery.title">Gallery</h1>
+        <p class="page-header__subtitle" data-i18n="gallery.subtitle">Photos</p>
+      </header>
+
+      <div class="section" style="padding-top: 0">
+        <div class="gallery-grid fade-up">
+
+          <div class="gallery-grid__item">
+            <img src="images/gallery/image-1.jpg" alt="Image 1" loading="lazy">
+          </div>
+          <div class="gallery-grid__item">
+            <img src="images/gallery/image-2.jpg" alt="Image 2" loading="lazy">
+          </div>
+          <div class="gallery-grid__item">
+            <img src="images/gallery/image-3.jpg" alt="Image 3" loading="lazy">
+          </div>
+          <div class="gallery-grid__item">
+            <img src="images/gallery/image-4.jpg" alt="Image 4" loading="lazy">
+          </div>
+          <div class="gallery-grid__item">
+            <img src="images/gallery/image-5.jpg" alt="Image 5" loading="lazy">
+          </div>
+          <div class="gallery-grid__item">
+            <img src="images/gallery/image-6.jpg" alt="Image 6" loading="lazy">
+          </div>
+          <div class="gallery-grid__item">
+            <img src="images/gallery/image-7.jpg" alt="Image 7" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <div data-include="pages/footer.html"></div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/includes.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
