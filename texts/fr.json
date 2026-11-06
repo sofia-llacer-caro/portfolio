@@ -89,6 +89,8 @@
     "u5_cat": "Conférence",
     "u6_title": "Conférence : Entreprendre avec l'IA de manière responsable — Semaine de l'Innovation, UAB",
     "u6_cat": "Conférence",
+    "u7_title": "Conférence : Éthique de l'IA dans l'entrepreneuriat — UAB",
+    "u7_cat": "Conférence",
     "a1_title": "Séminaire-Atelier MedIAP : Le dialogue entre écoles et organisations technologiques — Universitat de Barcelona",
     "a1_cat": "Séminaire",
     "a2_title": "Présentation d'article : Sycophantie de l'IA et spirales délirantes — Groupe de lecture du Centre de Vision par Ordinateur",
@@ -104,7 +106,9 @@
     "a7_title": "Poster : Audit participatif des biais intersectionnels dans les modèles d'IA visuelle — II Conférence nationale de Science ouverte",
     "a7_cat": "Poster",
     "a8_title": "Séminaire : IA neurosymbolique et justice épistémique pour les victimes du régime franquiste — HerStory, Universitat de Barcelona",
-    "a8_cat": "Séminaire"
+    "a8_cat": "Séminaire",
+    "a9_title": "Intervenante : Mon parcours professionnel jusqu'ici — 3e VIBEZ Festival",
+    "a9_cat": "Conférence"
   },
   "gallery": {
     "title": "Galerie",

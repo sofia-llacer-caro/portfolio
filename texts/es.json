@@ -89,6 +89,8 @@
     "u5_cat": "Charla",
     "u6_title": "Charla: Emprender con IA de manera responsable — Semana de la Innovación, UAB",
     "u6_cat": "Charla",
+    "u7_title": "Charla: Ética de la IA en el emprendimiento — UAB",
+    "u7_cat": "Charla",
     "a1_title": "Seminario-Taller MedIAP: El diálogo entre escuelas y organizaciones tecnológicas — Universitat de Barcelona",
     "a1_cat": "Seminario",
     "a2_title": "Presentación de artículo: Sicofancia de la IA y espirales delirantes — Grupo de lectura del Centro de Visión por Computador",
@@ -104,7 +106,9 @@
     "a7_title": "Póster: Auditoría participativa de sesgos interseccionales en modelos de IA visual — II Conferencia Nacional de Ciencia Abierta",
     "a7_cat": "Póster",
     "a8_title": "Seminario: IA neurosimbólica y justicia epistémica para víctimas del régimen franquista — HerStory, Universitat de Barcelona",
-    "a8_cat": "Seminario"
+    "a8_cat": "Seminario",
+    "a9_title": "Ponente: Mi trayectoria profesional hasta ahora — 3.er VIBEZ Festival",
+    "a9_cat": "Charla"
   },
   "gallery": {
     "title": "Galería",
