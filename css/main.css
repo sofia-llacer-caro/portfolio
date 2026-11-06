@@ -542,7 +542,7 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
 
 /* --- Gallery Grid (Pinterest-style masonry) --- */
 .gallery-grid {
-  column-count: 4;
+  column-count: 3;
   column-gap: var(--sp-5);
 }
 
@@ -566,7 +566,6 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   width: 100%; height: auto; display: block;
 }
 
-@media (max-width: 1024px) { .gallery-grid { column-count: 3; } }
 @media (max-width: 768px)  { .gallery-grid { column-count: 2; } }
 @media (max-width: 480px)  { .gallery-grid { column-count: 1; } }
 
